@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  SYDetailViewController.h
 //  SYFileExample
 //
 //  Created by Saucheong Ye on 6/30/15.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface SYDetailViewController : UIViewController
 
 @end
-

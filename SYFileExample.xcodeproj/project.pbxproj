@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023AAD4E1BE665390089400A /* SYDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023AAD4D1BE665390089400A /* SYDetailViewController.m */; };
+		023AAD511BE673130089400A /* SYExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023AAD501BE673130089400A /* SYExampleViewController.m */; };
 		0287F97D1BE3C59E0017CAB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0287F97C1BE3C59E0017CAB9 /* main.m */; };
 		0287F9801BE3C59E0017CAB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0287F97F1BE3C59E0017CAB9 /* AppDelegate.m */; };
-		0287F9831BE3C59E0017CAB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0287F9821BE3C59E0017CAB9 /* ViewController.m */; };
 		0287F9861BE3C59E0017CAB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0287F9841BE3C59E0017CAB9 /* Main.storyboard */; };
 		0287F9881BE3C59E0017CAB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0287F9871BE3C59E0017CAB9 /* Assets.xcassets */; };
 		0287F98B1BE3C59E0017CAB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0287F9891BE3C59E0017CAB9 /* LaunchScreen.storyboard */; };
 		0287F9961BE3C59E0017CAB9 /* SYFileExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0287F9951BE3C59E0017CAB9 /* SYFileExampleTests.m */; };
 		0287F9A11BE3C59E0017CAB9 /* SYFileExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0287F9A01BE3C59E0017CAB9 /* SYFileExampleUITests.m */; };
+		0287F9B11BE3C64A0017CAB9 /* SYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0287F9B01BE3C64A0017CAB9 /* SYFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023AAD4C1BE665390089400A /* SYDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDetailViewController.h; sourceTree = "<group>"; };
+		023AAD4D1BE665390089400A /* SYDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDetailViewController.m; sourceTree = "<group>"; };
+		023AAD4F1BE673130089400A /* SYExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYExampleViewController.h; sourceTree = "<group>"; };
+		023AAD501BE673130089400A /* SYExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYExampleViewController.m; sourceTree = "<group>"; };
 		0287F9781BE3C59E0017CAB9 /* SYFileExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYFileExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0287F97C1BE3C59E0017CAB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0287F97E1BE3C59E0017CAB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0287F97F1BE3C59E0017CAB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0287F9811BE3C59E0017CAB9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0287F9821BE3C59E0017CAB9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0287F9851BE3C59E0017CAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0287F9871BE3C59E0017CAB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0287F98A1BE3C59E0017CAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		0287F99C1BE3C59E0017CAB9 /* SYFileExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYFileExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0287F9A01BE3C59E0017CAB9 /* SYFileExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYFileExampleUITests.m; sourceTree = "<group>"; };
 		0287F9A21BE3C59E0017CAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0287F9AF1BE3C64A0017CAB9 /* SYFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFileManager.h; sourceTree = "<group>"; };
+		0287F9B01BE3C64A0017CAB9 /* SYFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,13 @@
 		0287F97A1BE3C59E0017CAB9 /* SYFileExample */ = {
 			isa = PBXGroup;
 			children = (
+				0287F9AE1BE3C63B0017CAB9 /* SYFileManager */,
 				0287F97E1BE3C59E0017CAB9 /* AppDelegate.h */,
 				0287F97F1BE3C59E0017CAB9 /* AppDelegate.m */,
-				0287F9811BE3C59E0017CAB9 /* ViewController.h */,
-				0287F9821BE3C59E0017CAB9 /* ViewController.m */,
+				023AAD4F1BE673130089400A /* SYExampleViewController.h */,
+				023AAD501BE673130089400A /* SYExampleViewController.m */,
+				023AAD4C1BE665390089400A /* SYDetailViewController.h */,
+				023AAD4D1BE665390089400A /* SYDetailViewController.m */,
 				0287F9841BE3C59E0017CAB9 /* Main.storyboard */,
 				0287F9871BE3C59E0017CAB9 /* Assets.xcassets */,
 				0287F9891BE3C59E0017CAB9 /* LaunchScreen.storyboard */,
@@ -138,6 +147,15 @@
 				0287F9A21BE3C59E0017CAB9 /* Info.plist */,
 			);
 			path = SYFileExampleUITests;
+			sourceTree = "<group>";
+		};
+		0287F9AE1BE3C63B0017CAB9 /* SYFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				0287F9AF1BE3C64A0017CAB9 /* SYFileManager.h */,
+				0287F9B01BE3C64A0017CAB9 /* SYFileManager.m */,
+			);
+			path = SYFileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +220,7 @@
 		0287F9701BE3C59E0017CAB9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SY;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Saucheong Ye";
 				TargetAttributes = {
@@ -270,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0287F9831BE3C59E0017CAB9 /* ViewController.m in Sources */,
+				023AAD4E1BE665390089400A /* SYDetailViewController.m in Sources */,
+				0287F9B11BE3C64A0017CAB9 /* SYFileManager.m in Sources */,
 				0287F9801BE3C59E0017CAB9 /* AppDelegate.m in Sources */,
+				023AAD511BE673130089400A /* SYExampleViewController.m in Sources */,
 				0287F97D1BE3C59E0017CAB9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYFileExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauchye.SYFileExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYFileExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauchye.SYFileExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +519,7 @@
 				0287F9A71BE3C59E0017CAB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0287F9A81BE3C59E0017CAB9 /* Build configuration list for PBXNativeTarget "SYFileExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +528,7 @@
 				0287F9AA1BE3C59E0017CAB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0287F9AB1BE3C59E0017CAB9 /* Build configuration list for PBXNativeTarget "SYFileExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +537,7 @@
 				0287F9AD1BE3C59E0017CAB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
