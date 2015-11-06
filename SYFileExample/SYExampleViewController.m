@@ -25,9 +25,11 @@
 - (void)setup{
     
     SYFileManager *fileManager = [SYFileManager sharedInstance];
-    NSArray *data = @[@"Apple", @"Google", @"Facebook", @"Yahoo", @"Amazon", @"Twitter"];
-    [fileManager writeArrayWithfileName:@"test" array:data];
+    NSArray *data = @[@"Apple", @"Google", @"Facebook", @"Twitter"];
     
+    if (data.count) {
+        [fileManager writeArrayWithfileName:@"Test" array:data];
+    }
     UILabel *writeDataLbl = [[UILabel alloc] initWithFrame:self.view.bounds];
     writeDataLbl.text = @"Write Data";
     writeDataLbl.textAlignment = NSTextAlignmentCenter;

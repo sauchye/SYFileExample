@@ -16,10 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-//    nav.navigationBar.translucent = NO;
-//    self.window.rootViewController = nav;
-//    self.window.backgroundColor = [UIColor whiteColor];
+
     return YES;
 }
 

@@ -8,7 +8,6 @@
 
 #import "SYDetailViewController.h"
 #import "SYFileManager.h"
-static NSString * const fileName = @"test";
 
 @interface SYDetailViewController ()
 
@@ -23,19 +22,34 @@ static NSString * const fileName = @"test";
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     SYFileManager *fileManager = [SYFileManager sharedInstance];
     
-    NSArray *data = [fileManager readArrayFileName:@"test"];
     
     UILabel *readDataLbl = [[UILabel alloc] initWithFrame:self.view.bounds];
     readDataLbl.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:readDataLbl];
-    
-    if (data) {
-        readDataLbl.text = @"Read Success";
-    }else{
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc]
+                                     initWithTarget:self
+                                     action:@selector(tapAction)]];
+
+    NSArray *data = [fileManager readArrayFileName:@"Test"];
+
+    if (!data) {
         readDataLbl.text = @"Read Failed";
+
+    }else{
+        readDataLbl.text = @"Read Success";
     }
     
+    NSMutableArray *d = [NSMutableArray arrayWithArray:data];
+
+    if (d.count) {
+        [d removeObjectAtIndex:0];
+        [fileManager removeObject:d fileName:@"Test"];
+    }
     NSLog(@"%@", data);
+}
+
+- (void)tapAction{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

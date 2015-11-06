@@ -8,6 +8,8 @@
 
 #import "SYFileManager.h"
 
+static NSString * const filePathName = @"Data";
+
 @interface SYFileManager ()
 {
     NSFileManager  *_fileManager;
@@ -37,7 +39,7 @@
     NSString *documents = [filePath firstObject];
     NSError *error = nil;
     _fileManager = [NSFileManager defaultManager];
-    NSString *dataPath = [documents stringByAppendingPathComponent:@"Data"];
+    NSString *dataPath = [documents stringByAppendingPathComponent:filePathName];
     BOOL res = [_fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&error];
     if (res) {
         NSLog(@"create data file success");
@@ -54,32 +56,43 @@
 - (BOOL)writeArrayWithfileName:(NSString *)fileName
                          array:(NSArray *)array{
     
-    _filePath = [self getDocumentsWithFileName:fileName];
-    NSLog(@"path\n%@",_filePath);
-
-    NSError *error = nil;
-    if ([_fileManager fileExistsAtPath:_filePath]) {
-        
-        [_fileManager removeItemAtPath:_filePath error:&error];
-        
-        NSLog(@"writeArrayWithfileName\n%@",error);
-    }
     
+    if (!array) {
+        NSAssert(array, @"write %@ can't be nil",array);
+        return NO;
+    }else{
+        _filePath = [self getDocumentsWithFileName:fileName];
+        NSLog(@"path\n%@",_filePath);
+        
+        NSError *error = nil;
+        if ([_fileManager fileExistsAtPath:_filePath]) {
+            
+            [_fileManager removeItemAtPath:_filePath error:&error];
+            
+            NSLog(@"writeArrayWithfileName\n%@",error);
+        }
+    }
     return [array writeToFile:_filePath atomically:YES];
 }
 
 - (BOOL)writeDictionaryWithfileName:(NSString *)fileName
                          dictionary:(NSDictionary *)dictionary{
     
-    _filePath = [self getDocumentsWithFileName:fileName];
-    NSLog(@"path\n%@",_filePath);
-
-    NSError *error = nil;
-    if ([_fileManager fileExistsAtPath:_filePath]) {
+    
+    if (!dictionary) {
+        NSAssert(dictionary, @"write %@ can't be nil",dictionary);
+        return NO;
+    }else{
+        _filePath = [self getDocumentsWithFileName:fileName];
+        NSLog(@"path\n%@",_filePath);
         
-        [_fileManager removeItemAtPath:_filePath error:&error];
-        
-        NSLog(@"writeDictionaryWithfileName\n%@",error);
+        NSError *error = nil;
+        if ([_fileManager fileExistsAtPath:_filePath]) {
+            
+            [_fileManager removeItemAtPath:_filePath error:&error];
+            
+            NSLog(@"writeDictionaryWithfileName\n%@",error);
+        }
     }
     
     return [dictionary writeToFile:_filePath atomically:YES];
@@ -97,24 +110,20 @@
     return [NSDictionary dictionaryWithContentsOfFile:_filePath];
 }
 
-- (void)removeMutableArray:(NSMutableArray *)mutableArray
-                   atIndex:(NSUInteger)index
-                  fileName:(NSString *)fileName{
+- (void)removeObject:(NSArray *)array
+            fileName:(NSString *)fileName{
     
-    [mutableArray removeObjectAtIndex:index];
     _filePath = [self getDocumentsWithFileName:fileName];
     NSError *error = nil;
-    
     if ([_fileManager fileExistsAtPath:_filePath]) {
         
         [_fileManager removeItemAtPath:_filePath error:&error];
         
         NSLog(@"removeAllObjectsWithFileName\n%@",error);
     }
-    
-    if (mutableArray) {
+    if (array.count) {
         
-        [self writeArrayWithfileName:fileName array:mutableArray];
+        [self writeArrayWithfileName:fileName array:array];
         
     }else{
         [self removeAllObjectsWithFileName:fileName];
@@ -125,7 +134,6 @@
 - (void)removeAllObjectsWithFileName:(NSString *)fileName{
     
     _filePath = [self getDocumentsWithFileName:fileName];
-    _fileManager = [NSFileManager defaultManager];
     
     NSError *error = nil;
     if ([_fileManager fileExistsAtPath:_filePath]) {

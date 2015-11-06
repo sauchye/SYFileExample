@@ -20,14 +20,10 @@ Drag SYFileManager file to your project, See Example :）
 
 - (NSDictionary *)readDictionaryFileName:(NSString *)fileName;
 
-
-
-- (void)removeMutableArray:(NSMutableArray *)mutableArray
-                   atIndex:(NSUInteger)index
-                  fileName:(NSString *)fileName;
+- (void)removeObject:(NSArray *)array
+            fileName:(NSString *)fileName;
 
 - (void)removeAllObjectsWithFileName:(NSString *)fileName;
-
 ```
 
 
